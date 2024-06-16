@@ -50,7 +50,7 @@ def convert_md_to_html(input_file, output_file):
 
 if __name__ == '__main__':
     # Parse command-line arguments
-    if len(argv) < 2:
+    if len(argv) != 3:
         print('Usage: ./markdown2html.py README.md README.html' ,file=sys.stderr)
         sys.exit(1)
 
