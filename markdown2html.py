@@ -13,9 +13,25 @@ Example:
     ./markdown2html.py README.md README.html
 """
 
+#!/usr/bin/python3
+"""
+This is a script to convert a Markdown file to HTML.
+
+Usage:
+    ./markdown2html.py [input_file] [output_file]
+
+Arguments:
+    input_file: the name of the Markdown file to be converted
+    output_file: the name of the output HTML file
+
+Example:
+    ./markdown2html.py README.md README.html
+"""
+
 import argparse
 import pathlib
 import re
+import sys
 
 
 def convert_md_to_html(input_file, output_file):
