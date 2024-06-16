@@ -21,44 +21,26 @@ from sys import argv
 import sys
 
 
-def convert_md_to_html(input_file, output_file):
-    '''
-    Converts markdown file to HTML file
-    '''
-    # Read the contents of the input file
-    with open(input_file, encoding='utf-8') as f:
-        md_content = f.readlines()
-
-    html_content = []
-    for line in md_content:
-        # Check if the line is a heading
-        match = re.match(r'(#){1,6} (.*)', line)
-        if match:
-            # Get the level of the heading
-            h_level = len(match.group(1))
-            # Get the content of the heading
-            h_content = match.group(2)
-            # Append the HTML equivalent of the heading
-            html_content.append(f'<h{h_level}>{h_content}</h{h_level}>\n')
-        else:
-            html_content.append(line)
-
-    # Write the HTML content to the output file
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.writelines(html_content)
-
-
-if __name__ == '__main__':
-    # Parse command-line arguments
-    if len(argv) != 3:
-        sys.stderr.write('Usage: ./markdown2html.py README.md README.html')
-        sys.exit(1)
-
-    # Check if the input file exists
-    input_path = argv[1]
-    if not os.path.isfile(input_path):
-        print(f'Missing {input_path}', file=sys.stderr)
-        sys.exit(1)
-
-    # Convert the markdown file to HTML
-    convert_md_to_html(argv[1], argv[2])
+if __name__ == "__main__":
+    '''the number of arguments is less than 2'''
+    if len(sys.argv) != 3:
+        print('Usage: ./markdown2html.py README.md README.html', file=sys.stderr)
+        exit(1)
+    '''Markdown file doesn’t exist'''
+    if not path.exists(sys.argv[1]):
+        print('Missing {}'.format(sys.argv[1]), file=sys.stderr)
+        exit(1)
+    '''Headings Markdown'''
+    with open(sys.argv[1], 'r') as read_file:
+        line_list = []
+        for lines in read_file.readlines():
+            cout_cra = 0
+            for line in lines:
+                for car in range(len(line)):
+                    if line[car] == '#':
+                        cout_cra += 1
+            lines = lines.rstrip('\r\n')
+            line_list.append("<h{}>{}</h{}>".format(cout_cra, lines.replace('#',''), cout_cra))
+        with open(sys.argv[2], 'a') as write_file:
+            for line in line_list:
+                write_file.write('{}\n'.format(line))
