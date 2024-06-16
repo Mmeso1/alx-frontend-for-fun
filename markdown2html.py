@@ -32,10 +32,11 @@ def convert_md_to_html(input_file, output_file):
     html_content = []
     for line in md_content:
         # Check if the line is a heading
-        match = re.match(r'(#){1,6} (.*)', line)
+        match = re.match(r'((?:#){1,6}) (.*)', line)
         if match:
             # Get the level of the heading
             h_level = len(match.group(1))
+            print("match.group: ", match.group(1))
             # Get the content of the heading
             h_content = match.group(2)
             # Append the HTML equivalent of the heading
