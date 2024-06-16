@@ -53,7 +53,7 @@ if __name__ == '__main__':
     if len(argv) != 3:
         sys.stderr.write('Usage: ./markdown2html.py README.md README.html')
         sys.exit(1)
-    
+
     # Check if the input file exists
     input_path = argv[1]
     if not os.path.isfile(input_path):
