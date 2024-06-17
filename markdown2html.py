@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """ Converts a Markdown file to HTML """
-
 import sys
 import os
 import re
@@ -113,4 +112,5 @@ def main():
 
 
 if __name__ == "__main__":
+    """ This is executed when run from the command line"""
     main()
