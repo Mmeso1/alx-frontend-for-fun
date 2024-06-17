@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+""" Converts a Markdown file to HTML """
 
 import sys
 import os
@@ -7,6 +8,7 @@ import hashlib
 
 
 def convert_md_to_html(md_file, html_file):
+    """ Converts a Markdown file to HTML """
     # Define the markdown syntaxes and their corresponding HTML conversion functions
     syntaxes = [
         (r'((?:#){1,6}) (.*)', lambda m: f'<h{len(m.group(1))}>{m.group(2)}</h{len(m.group(1))}>\n'),
