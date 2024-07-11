@@ -1,0 +1,22 @@
+a {
+  position: relative;
+  text-decoration: none; /* Remove the default underline */
+  color: #a6475c; /* Optional: Change the text color */
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  bottom: -5px; /* Distance of the underline from the text */
+  left: 0;
+  background-color: #a6475c; /* Color of the underline */
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover::after {
+  visibility: visible;
+  width: 100%;
+}
