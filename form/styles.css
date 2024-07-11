@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 20px;
+}
+
+header img {
+  border-radius: 50%;
+}
+
+main {
+  padding: 20px;
+}
+
+#goals,
+#current-info,
+#links {
+  margin-bottom: 20px;
+}
+
+#links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#links li {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

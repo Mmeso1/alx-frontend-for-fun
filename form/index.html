@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tech Goals</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 data-testid="slackDisplayName">Your Slack Display Name</h1>
+      <img
+        src="profile.jpg"
+        alt="Slack Profile Picture"
+        data-testid="slackProfilePicture"
+        width="200"
+        height="200"
+      />
+    </header>
+
+    <main>
+      <section id="goals">
+        <h2>My Tech Goals for the Next 2 Years</h2>
+        <p>Goal 1...</p>
+        <p>Goal 2...</p>
+        <p>Goal 3...</p>
+      </section>
+
+      <section id="current-info">
+        <p>
+          Current Time (UTC):
+          <span data-testid="currentTimeUTC">Loading...</span>
+        </p>
+        <p>Current Day: <span data-testid="currentDay">Loading...</span></p>
+        <p>
+          Slack Email:
+          <span data-testid="slackEmail">your-email@example.com</span>
+        </p>
+      </section>
+
+      <section id="links">
+        <h3>Useful Links</h3>
+        <ul>
+          <li>
+            <a href="https://hng.tech/learn" data-testid="hngLink"
+              >HNG Tech Learn</a
+            >
+          </li>
+          <li>
+            <a href="https://keyword.dog" data-testid="keywordLink"
+              >Keyword Dog</a
+            >
+          </li>
+          <li>
+            <a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink"
+              >Scrape Any Web</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
